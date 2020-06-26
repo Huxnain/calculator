@@ -1,0 +1,52 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+<link rel="stylesheet" href="style.css" />
+
+<body>
+<div id="cal">
+<input type="text" id="screen"/><br />
+
+<input type="button" value="1" onclick="show(this.value)" class="sttg1"/>
+<input type="button" value="2" onclick="show(this.value)" class="sttg"/>
+<input type="button" value="3" onclick="show(this.value)" class="sttg"/><br />
+
+<input type="button" value="4" onclick="show(this.value)" class="sttg1"/>
+<input type="button" value="5" onclick="show(this.value)" class="sttg"/>
+<input type="button" value="6" onclick="show(this.value)" class="sttg"/><br />
+
+<input type="button" value="7" onclick="show(this.value)" class="sttg1"/>
+<input type="button" value="8" onclick="show(this.value)" class="sttg"/>
+<input type="button" value="9" onclick="show(this.value)" class="sttg"/><br />
+
+<input type="button" value="+" onclick="show(this.value)" class="sttg1"/>
+<input type="button" value="0" onclick="show(this.value)" class="sttg"/>
+<input type="button" value="=" onclick="equal()" class="sttg" /><br />
+
+<input type="button" value="-" onclick="show(this.value)" class="sttg1"/>
+<input type="button" value="*" onclick="show(this.value)" class="sttg"/>
+<input type="button" value="/" onclick="show(this.value)" class="sttg"/><br />
+
+<input type="button" value="sqrt" onclick="squareroot()" class="sttg1"/>
+<input type="button" value="c" onclick="empty()" class="sttg"/>
+
+</div>
+</body>
+
+<script>
+    
+function show(h)
+{document.getElementById('screen').value+=h;}
+function empty()
+{document.getElementById('screen').value="";}
+function equal()
+{document.getElementById('screen').value=eval(document.getElementById('screen').value);}
+function squareroot()
+{var x=document.getElementById('screen').value;
+ document.getElementById('screen').value=Math.sqrt(x);}
+
+</script>
+</html>
